@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prounce it!!</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="modal-header">
+        <h1 class="logo">
+            <img class="logo-icon" src="images/prounceit.png" alt='Prounce It' />Prounce it
+            <span class="version">(1.0.0)</span>
+        </h1>
+    </div><br>
+    <div class="model-content text-center">
+        <form class="formdimensions">
+            <div class="form-group">
+                <textarea name="" id="text-input" class="form-control form-control-lg"
+                    placeholder="Type anything..."></textarea>
+            </div>
+            <div class="form-group">
+                <select id="voice-select" class="form-control form-control-lg"></select>
+            </div>
+            <div class="form-group">
+                <label for="rate">Rate</label>
+                <div id="rate-value" class="badge badge-primary float-right">1</div>
+                <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="pitch">Pitch</label>
+                <div id="pitch-value" class="badge badge-primary float-right">1</div>
+                <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
+            </div>
+            <button class="btn btn-outline-primary btn-lg btn-block" id="speakit">Prounce It</button>
+        </form><br>
+    </div>
+    <div class="modal-content">
+        <p class="text-secondary"> Note: This app uses the Web Speech API which is experimental and may not fully work
+            in some versions of certain browsers</p>
+    </div>
+    <div class="modal-icons">
+        <div class="flex-container">
+            <div class="flex">
+                <a href="https://www.github.com/jakkarohith" target="_blank">
+                    <i class="fa fa-github" style="color:darksalmon "></i>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://www.linkedin.com/in/jakka-rohith-a5bba8157/" target="_blank">
+                    <i class="fa fa-linkedin" style="color:darksalmon "></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="speak.js"></script>
+</body>
+
+</html>
