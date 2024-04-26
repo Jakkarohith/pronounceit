@@ -1,23 +1,25 @@
 {
-    "manifest_version": 2,
-    "name": "Prounce it",
-    "description": "If you don't know how to prounce. We will help you",
-    "version": "1.0.0",
-    "icons": {
-        "128": "icon_128.png"
-    },
-    "browser_action": {
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
-    },
-    "permissions": [
-        "activeTab",
-        "storage",
-        "contextMenus"
-    ],
-    "background": {
-        "scripts": [
-            "speakEvent.js"
-        ]
+  "manifest_version": 3,
+  "name": "Prounce it",
+  "description": "If you don't know how to prounce. We will help you",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icons/icon_128.png"
+  },
+  "action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "css": ["button.css"],
+      "js": ["button.js"]
     }
+  ],
+  "permissions": ["activeTab", "storage", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
