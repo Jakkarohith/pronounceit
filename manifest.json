@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Prounce it",
+  "name": "Word Realm",
   "description": "If you don't know how to prounce. We will help you",
   "version": "1.0.0",
   "icons": {
@@ -14,8 +14,22 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "all_frames": true,
-      "css": ["button.css"],
-      "js": ["button.js"]
+      "css": ["css/startupButton.css"],
+      "js": ["js/startupButton.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/icon_128.png"],
+      "matches": ["http://*/*", "https://*/*"]
+    },
+    {
+      "resources": ["icons/icon.png"],
+      "matches": ["http://*/*", "https://*/*"]
+    },
+    {
+      "resources": ["popup.html"],
+      "matches": ["http://*/*", "https://*/*"]
     }
   ],
   "permissions": ["activeTab", "storage", "contextMenus"],
